@@ -17,6 +17,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background: var(--bg-color);
@@ -88,8 +89,8 @@ span{
                  0 0 100px var(--main-color);
 }
 .home-content h3:nth-of-type(2){
-    margin-bottom: 2rem;
-    font-size: 5rem;
+    margin-bottom: 3rem;
+    font-size: 4rem;
 }
 .home-content h1{
     font-size: 8rem;
@@ -108,6 +109,7 @@ span{
 .home-content p{
     font-size: 1.8rem;
     font-weight: 500;
+    justify-content: center;
 }
 .social-icons a{
     display: inline-flex;
@@ -134,6 +136,7 @@ span{
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
+    margin-top: 1.5rem;
     font-size: 1.6rem;
     color: white;
     border: 2px solid transparent;
@@ -164,7 +167,7 @@ span{
     background-color: var(--bg-color);
     position: absolute;
     width: calc(100% + 8px);
-    height: 103%;
+    height: 100%;
     border-left: 2px solid #333;
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
@@ -179,7 +182,7 @@ span{
 @keyframes words{
     0%,
     20%{
-        content: 'Youtuber';
+        content: 'Frontend Developer';
     }
     21%,
     40%{
@@ -187,15 +190,15 @@ span{
     }
     41%,
     60%{
-        content: 'Web Developer';
+        content: 'UI/UX Designer';
     }
     61%,
     80%{
-        content: 'Blogger';
+        content: 'Photographer';
     }
     81%,
     100%{
-        content: 'Gamer';
+        content: 'Web Developer';
     }
 }
 
@@ -270,4 +273,368 @@ span{
     border-left: 2px solid #333;
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+.services h2{
+    margin-bottom: 5rem;
+}
+.service-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.service-container .services-box{
+    flex: 1 1 40rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.service-container .services-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.services-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.services-box h3{
+    font-size: 2.6rem;
+}
+.servicess-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: #1d1d1d;
+    width: 50px;
+}
+.projects{
+    background: var(--second-bg-color);
+}
+.projects h2{
+    margin-bottom: 5rem;
+}
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-container .projects-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.projects-box img{
+    width: 100%;
+    transition: 0.5s ease;
+}
+.projects-box:hover img{
+    transform: scale(1.1);
+}
+
+.projects-box .projects-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.projects-box .projects-info:hover{
+    background: radial-gradient(rgba(0,0,0,0.5)), var(--main-color);
+    transform: scale(1.1);
+}
+.projects-info h4{
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+}
+.projects-info p{
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+}
+.projects-info a{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.projects-info a i{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.skills h2{
+    margin-bottom: 2rem;
+}
+.skills{
+    margin: 0 auto;
+}
+.skill-bars{
+    padding: 25px 30px;
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.skill-bars .bar{
+    margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+    margin-top: 0px;
+}
+.skill-bars .bar .info{
+    margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+}
+.skill-bars .bar .progress-line{
+    height: 10px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 10px;
+}
+.bar .progress-line span{
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background: #0077ff;
+    cursor: pointer;
+}
+.bar .progress-line.javascript span{
+    width: 100%;
+    background-color: gold;
+    box-shadow: 0 0 25px gold;
+    transition: 0.3s ease;
+}
+.bar .progress-line.javascript span:hover{
+    box-shadow: 0 0 25px gold,
+                0 0 50px gold;
+}
+.bar .progress-line.react span{
+    width: 60%;
+    background-color: rgb(58, 58, 255);
+    box-shadow: 0 0 25px rgb(58, 58, 255);
+    transition: 0.3s ease;
+}
+.bar .progress-line.react span:hover{
+    box-shadow: 0 0 25px rgb(58, 58, 255),
+                0 0 50px rgb(58, 58, 255)
+}
+.bar .progress-line.html span{
+    width: 100%;
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    transition: 0.3s ease;
+}
+.bar .progress-line.html span:hover{
+    box-shadow: 0 0 25px orangered,
+                0 0 50px orangered;
+}
+.bar .progress-line.css span{
+    width: 80%;
+    background-color: blue;
+    box-shadow: 0 0 25px blue;
+    transition: 0.3s ease;
+}
+.bar .progress-line.css span:hover{
+    box-shadow: 0 0 25px blue,
+                0 0 50px blue;
+}
+.contact{
+    background-color: var(--second-bg-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input, .contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    margin: 1rem 0;
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid white;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .projects{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:895px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--second-bg-color);
+        border-top: 0.1rem solid rgba(0,0,0,0.105);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-content{
+        margin: 1rem 4rem;
+    }
+    .about img{
+        width: 70vw;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .projects h2{
+        margin-bottom: 3rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
