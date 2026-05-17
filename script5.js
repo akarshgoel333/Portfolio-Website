@@ -1,5 +1,11 @@
-let menuIcons = document.querySelector("#menu-icon");
+let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
+
+// Corrected click toggle logic
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -14,12 +20,14 @@ window.onscroll = () => {
         if(top >= offset && top < offset + height){
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ' ]').classList.add('active');
-            })
+                // Clean selector interpolation
+                let activeLink = document.querySelector(`header nav a[href*='${id}']`);
+                if(activeLink) activeLink.classList.add('active');
+            });
+            
+            // Auto close mobile drawer on section change/scroll action
+            menuIcon.classList.remove('bx-x');
+            navbar.classList.remove('active');
         }
-    })
-}
-menuIcons.oneclick = () => {
-    menuIcons.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+    });
 }
